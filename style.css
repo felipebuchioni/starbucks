@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --dark-green: #40513B;
+  --light-green: #9DC08B;
+  --medium-green: #609966;
+  --off-white: #EDF1D6;
+  --dark-white: #cacac9; 
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  padding: 10px 25px;
+  background-color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-logo {
+  width: 4%;
+}
+
+.search-bar {
+  width: 40%;
+  position: relative;
+}
+
+#searchBar {
+  width: 100%;
+  height: 40px;
+  background-color: var(--off-white);
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar-icon {
+  width: 15px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.links-list {
+  list-style: none;
+  display: flex;
+  gap: 0 4em;
+}
+
+.list-item a {
+  color: var(--off-white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.list-item a:hover {
+  color: var(--dark-white);
+}
+
+.login a {
+  font-weight: 700;
+}
+
+/* ---------------- MAIN ------------------------------- */
+
+.main {
+  background-color: var(--off-white);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 100vh;
+}
+
+.itens {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding: 0 100px;
+  gap: 3em;
+}
+
+.itens-title {
+  font-size: 6rem;
+  color: var(--dark-green);
+}
+
+.itens-description {
+  font-size: 1.5rem;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-green);
+}
+
+.highlight-green {
+  color: var(--light-green);
+}
+
+.social-media {
+  display: flex;
+  list-style: none;
+  gap: 0 1.5em;
+}
+
+.social-icon {
+  width: 50px;
+}
+
+.drink{
+  position: relative;
+}
+
+.drink-image {
+  width: 90%;
+  position: absolute;
+  right: 10px;
+  z-index: 100;
+  top: 40px;
+}
+
+.green-circle {
+  background-color: var(--light-green);
+  width: 1000px;
+  height: 1000px;
+  border-radius: 100%;
+  position: absolute;
+  right: -310px;
+  top: 150px;
+}
+
+/* ----------------FOOTER------------------- */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-list {
+  text-align: center;
+  display: flex;
+  list-style: none;
+  gap: 0 1.5em;
+  margin-bottom: 1em;
+}
+
+.footer-link a {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer-paragraph {
+  color: var(--light-green);
+  font-size: 1rem;
+}
+
+@media(max-width: 1740px) {
+  .itens-title {
+    font-size: 5rem;
+  }
+
+  .green-circle {
+    width: 900px;
+    height: 900px;
+    right: -190px;
+    top: 200px;
+  }
+
+  .drink-image {
+    width: 100%;
+    top: 100px;
+  }
+}
+
+@media(max-width: 1501px) {
+  .green-circle {
+    right: -290px;
+  }
+
+  .drink-image {
+    right: 80px;
+  }
+
+  .itens {
+    margin-top: 120px;
+  }
+
+  .itens-title {
+    font-size: 4rem;
+  }
+}
+
+@media(max-width: 1270px) {
+
+  .list-item a {
+    font-size: 1.2rem;
+  }
+
+  .green-circle {
+    right: -360px;
+    top: 150px;
+  }
+
+  .drink-image {
+    width: 600px;
+    top: 150px;
+    right: -60px;
+  }
+
+  .itens {
+    margin-top: 150px;
+  }
+
+  .itens-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media(max-width: 1150px) {
+  .itens-title {
+    font-size: 3rem;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 1024px) {
+  .green-circle {
+    right: -450px;
+  }
+
+  .drink-image {
+    right: -100px;
+  }
+
+  .itens {
+    margin-top: 280px;
+  }
+
+  .itens-title {
+    font-size: 2.5rem;
+  }
+
+  .itens-description {
+    font-size: 1rem;
+  }
+
+  .footer-list {
+    display: none;
+  }
+
+  .footer-paragraph {
+
+    font-size: 0.9rem;
+  }
+
+}
+
+@media(max-width: 425px) {
+
+  .header {
+    gap: 20px 0px;
+    padding: 20px 5px;
+  }
+
+  .header-logo {
+    width: 20%;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+
+  .list-item a {
+    font-size: 10pt;
+  }
+
+  .main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .itens {
+    margin-top: 50px;
+    padding: 0px 30px;
+  }
+
+  .itens-title {
+    margin-bottom: 400px;
+  }
+
+  .itens-description {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .drink {
+    position: relative;
+    text-align: center;
+    top: -770px;
+  }
+
+  .drink-image {
+    right: 50px;
+    top: 170px;
+    width: 300px;
+  }
+
+  .green-circle {
+    width: 400px;
+    height: 400px;
+    right: 0px;
+    top: 150px;
+  }
+}
